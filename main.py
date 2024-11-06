@@ -10,24 +10,23 @@ def countEvens(aList):
             counter += 1
     return counter
 
-x = countEvens([2,5,7, 8,10])
-print(x)
-print(countEvens([10,5,20]))
 
 
-numArray = []
-x = ()
-listSize = len(numArray)
-def countLarger(numArray):
+def countLarger(numArray, x):
     numCounter = 0
     for i in numArray:
         if i > x:
             numCounter += 1
     return numCounter
 
-x = 4 
-numArray = [2, 6, 34, 60]
-numLarger = countLarger(numArray)
-print(numLarger)
 
 
+
+def isPalindrome(aString):
+    aString = aString.lower()
+    for i in range(len(aString)):
+        oneBack = (aString[len(aString)-1-i])
+        forward = (aString[i]) # i is an index of list
+        if oneBack != forward:
+            return False
+    return True    
